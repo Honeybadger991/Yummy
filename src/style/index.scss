@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Manrope', sans-serif;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+
+//                                  APP
+.App {
+  display: flex;
+  justify-content: center;
+  background: rgba(247, 241, 203, 0.4);
+}
+
+.content{
+  width: 1140px;
+  min-height: 100vh;
+  margin-inline: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex: 1 1 auto;
+}
+//                                  HEADER
+.header-wrapper{
+  padding: 15px 15px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+.logo-wrapper{
+  width: 120px;
+  height: 40px;
+}
+.logo{
+  width: 100%;;
+  height: 100%;
+}
+
+//                                  SEARCH
+.search-wrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.national{
+  &-list{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+  &-item{
+    width: 55px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background-color: rgba(167, 50, 5, 0.8);
+    transition: 0.3s all ease;
+    &-img{
+      width: 30px;
+      height: 30px;
+    }
+    &-name{
+      font-size: 10px;
+      color: #fff;
+    }
+    &:hover{
+      background: rgba(213,60,146,1);
+      transform: scale(1.05);
+    }
+    &.active{
+      background: rgba(213,60,146,1);
+    }
+  }
+}
+.search{
+  &-form, &-input, &-button{
+    height: 35px;
+    border: none;
+    &:focus{
+      outline: none;
+    }
+  }
+  &-form{
+    width: 35%;
+    min-width: 270px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &-input{
+    width: 85%;
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
+    background-color: rgba(167, 50, 5, 0.8);
+    color: #fff;
+    font-size: 16px;
+    &::placeholder{
+      font-size: 12px;
+      color:#fff;
+    }
+  }
+  &-button{
+    width: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 10px 10px 0;
+    background-color: rgba(213,60,146,1);
+    cursor: pointer;
+    transition: 0.4s all ease;
+    &:hover{
+      background-color: rgb(221, 8, 245);
+    }
+  }
+  &-icon{
+    width: 20px;
+    height: 20px;
+  }
+}
+//                                        SUGGESTIONS
+.suggestions-wrapper{
+  position: relative;
+}
+.popular, .fast, .vegetarian{
+  &-wrapper{
+      padding: 15px;
+  }
+  &-section{
+      margin-bottom: 10px;
+      display: flex;
+      gap: 10px;
+      align-items: center;
+  }
+  &-title{
+      padding: 0 0 5px 20px;
+      font-size: 24px;
+      font-weight: 700;
+      color: rgba(167, 50, 5, 0.8);
+  }
+  &-img{
+      width: 30px;
+      height: 30px;
+  }
+  &-item{
+      width: 300px;
+      height: 160px;
+      position: relative;
+      border-radius: 15px;
+      overflow: hidden;
+      &-title{
+          position: absolute;
+          bottom: 8%;
+          left: 50%;
+          z-index: 5;
+          transform: translateX(-50%);
+          font-size: 10px;
+          color:#fff;
+          width: 90%;
+          text-align: center;
+      }
+      &-img{
+          width: 100%;
+          height: 100%;
+      }
+  }
+}
+.popular, .vegetarian{
+  &-item{
+      width: 300px;
+  }
+}
+.fast{
+  &-item{
+      width: 210px;
+  }
+}
+.background{
+  z-index: 3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5))
+}
+//                                          SEARCH RESULTS
+.cuisine, .query{
+  &-wrapper{
+      position: relative;
+      padding: 25px 10px 15px;
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 15px;
+  }
+  &-item{
+      width: 250px;
+      height: 200px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      overflow: hidden;
+      &-img{
+          width: 100%;
+          height: 75%;
+          border-radius: 15px;
+      }
+      &-title{
+          font-size: 14px;
+          text-align: center;
+          color: rgba(167, 50, 5, 1);
+      }
+  }
+}
+.no-result{
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  &-text{
+    text-align: center;
+    font-size: 18px;
+    color: rgba(167, 50, 5, 1);
+  }
+}
+
+//                                          SINGLE RECIPE
+.recipe{
+  &-wrapper{
+      padding: 40px 20px 15px;
+      display: flex;
+      gap: 10%;
+  }
+  &-info{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      color: rgb(167, 50, 5);
+      width: 45%;
+  }
+  &-name{
+      text-align: center;
+      font-size: 16px;
+  }
+  &-img{
+      margin: 0 auto;
+      width: 400px;
+      height: 200px;
+      border-radius: 15px;
+  }
+  &-description{
+      font-size: 12px;
+      text-align: justify;
+  }
+  &-time, &-servings{
+    display: none;
+    &-img{
+      width: 24px;
+      height: 24px;
+    }
+    &-text{
+      font-size: 14px;
+      color: rgb(167, 50, 5);
+    }
+  }
+  &-guide{
+      padding-top: 15px;
+      width: 45%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      font-weight: 700;
+  }
+  &-btns{
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+  }
+  &-btn{
+      width: 100px;
+      height: 40px;
+      font-weight: 700;
+      color: rgba(167, 50, 5, 0.8);
+      border: 3px solid rgba(167, 50, 5, 0.8);
+      border-radius: 10px;
+      background-color: transparent;
+      cursor: pointer;
+      transition: 0.3s all ease;
+      &:hover{
+          background: rgba(213,60,146,1);
+          transform: scale(1.05);
+          color: #fff;
+          border: none;
+      }
+      &.active{
+          background: rgba(213,60,146,1);
+          color: #fff;
+          border: none;
+      }
+  }
+  &-text{
+      padding-top: 20px;
+      text-align: justify;
+      color: rgb(167, 50, 5);
+  }
+}
+
+//                                          ERROR
+.error{
+  &-wrapper{
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+  &-message{
+    text-align: center;
+    font-size: 18px;
+    color: rgba(167, 50, 5, 1);
+  }
+}
+//                                                BUTTONS
+
+.no-result, .error{
+  &-btn{
+  width: 150px;
+  height: 50px;
+  font-weight: 700;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  background-color: rgba(213,60,146,1);
+  cursor: pointer;
+  transition: 0.4s all ease;
+    &:hover{
+      background-color: rgb(221, 8, 245);
+    }
+  }
+}
+
+//                                                LOADING
+
+.loading-wrapper{
+  position: relative;
+  margin-top: 100px;
+}
+.loading-circle{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(167, 50, 5, 1);
+  border-radius: 100%;
+  border-top-color: transparent;
+  animation: loading 450ms linear infinite;
+}
+
+@keyframes loading{
+  0%{transform: translateY(-50%) rotate(0);}
+  100%{transform: translateY(-50%) rotate(1turn);}
+}
+//                                                  FOOTER
+.footer{
+  border-top: 2px dashed rgba(213,60,146, 0.8);
+  margin-block: 10px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(167, 50, 5, 1);
+}
+
+@media(max-width: 1199.8px){
+  .content{
+    width: 940px;
+  }
+}
+
+@media(max-width: 991.8px){
+  .content{
+    width: 740px;
+  }
+  .recipe{
+    &-img{
+      margin: 0 auto;
+      width: 100%;
+      height: 140px;
+      border-radius: 15px;
+    }
+  }
+
+}
+
+@media(max-width: 767.8px){
+  .content{
+    width: 400px;
+  }
+
+  .national{
+    &-list{
+      gap: 10px;
+    }
+    &-item{
+      width: 45px;
+      height: 40px;
+      &-img{
+        width: 20px;
+        height: 20px;
+      }
+      &-name{
+        font-size: 9px;
+      }
+    }
+  }
+
+  .search-wrapper{
+    padding-top: 20px;
+  }
+
+  .logo-wrapper{
+    margin: 0 auto;
+  }
+  .suggestions-wrapper{
+    padding-top: 20px;
+  }
+  .popular, .fast, .vegetarian{
+    &-wrapper{
+        padding: 5px;
+    }
+    &-section{
+        margin-block: 10px;
+        justify-content: center;
+        gap: 5px;
+    }
+    &-title{
+        padding: 0 0 5px 5px;
+        font-size: 20px;
+    }
+    &-img{
+        width: 30px;
+        height: 30px;
+    }
+  }
+  .fast{
+    &-item{
+        width: 180px;
+    }
+  }
+  .cuisine, .query{
+    &-wrapper{
+        gap: 20px;
+    }
+    &-item{
+        gap: 5px;
+        &-title{
+            font-size: 12px;
+        }
+    }
+  }
+  .recipe{
+    &-wrapper{
+      flex-direction: column;
+      gap: 25px;
+    }
+    &-info{
+      width: 100%;
+    }
+    &-img{
+      height: 180px;
+    }
+    &-description{
+      display: none;
+    }
+    &-time, &-servings{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    &-guide{
+      width: 100%;
+    }
+  }
+}
+
+
+@media(max-width: 424.8px){
+  .content{
+    width: 300px;
+  }
+
+  .national{
+    &-list{
+      gap: 5px;
+    }
+  }
+
+  .fast{
+    &-item{
+        width: 140px;
+        height: 140px;
+    }
+  }
+
+  .recipe{
+    &-name{
+      font-size: 14px;
+  }
+    &-img{
+      height: 130px;
+    }
+    &-guide{
+      width: 100%;
+    }
+    &-text{
+      font-size: 14px ;
+    }
+  }
+
+  .loading-wrapper{
+    margin-top: 80px;
+  }
+}
