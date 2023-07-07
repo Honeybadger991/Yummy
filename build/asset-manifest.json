@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/static/css/main.91c2c0fc.css",
+    "main.js": "/static/js/main.bdf5a7f2.js",
+    "static/media/yummy-high-resolution-logo-color-on-transparent-background.png": "/static/media/yummy-high-resolution-logo-color-on-transparent-background.dee70992e93428da6546.png",
+    "static/media/hourglass.svg": "/static/media/hourglass.7f5ea2a8aa331b6be223b33c48b1c23e.svg",
+    "static/media/slice.svg": "/static/media/slice.5d22cf44b6e99868f0f31861960d79fb.svg",
+    "static/media/burger.svg": "/static/media/burger.cdf49aca6c0b9850d8eb00d23f0eb5ee.svg",
+    "static/media/steak.svg": "/static/media/steak.49b07c96b37aef9457e0e85a68d024e5.svg",
+    "static/media/soup.svg": "/static/media/soup.62180c3308ec3d54c13fe79ea82b90b8.svg",
+    "static/media/cup.svg": "/static/media/cup.4e6d06e3560df25d44a620298ca1b157.svg",
+    "static/media/olives.svg": "/static/media/olives.faeb4e1651df4a1514842dfc30dcedf3.svg",
+    "static/media/nachos.svg": "/static/media/nachos.ec8d882f732cf3bea35e88777a9ebf28.svg",
+    "static/media/pizza-slice.svg": "/static/media/pizza-slice.0c9ac12708553f89b23e899e171c3331.svg",
+    "static/media/fast.svg": "/static/media/fast.85b82dede8788694b61f8792afafaab0.svg",
+    "index.html": "/index.html",
+    "static/media/star-shape.svg": "/static/media/star-shape.c2e24041827cc337451d61a9d8786a01.svg",
+    "static/media/search.svg": "/static/media/search.e8bea1453f665bd8bc7ee1487dbc8d5f.svg",
+    "main.91c2c0fc.css.map": "/static/css/main.91c2c0fc.css.map",
+    "main.bdf5a7f2.js.map": "/static/js/main.bdf5a7f2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91c2c0fc.css",
+    "static/js/main.bdf5a7f2.js"
+  ]
+}
